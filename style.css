@@ -1,0 +1,78 @@
+body{
+   width: 1000px;
+   margin: auto;
+   padding: 0;
+}
+
+nav{
+    background-color: rgb(41, 38, 38);
+    margin-top:10px;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    cursor: pointer;
+}
+
+header nav ul li{
+    display: inline-block;
+    width: 200px;
+    color : white;
+    text-align: center;
+    font-size: 25px;
+    border-right: 2px solid white;
+    
+} 
+header nav ul li:first-child{
+    margin-left : 50px;
+    border-left: 2px solid white;
+
+}
+.fb {
+    width: 1000px;
+    height: 400px;
+    object-fit: cover;
+}
+.fm {
+    width: 500px;
+    height: 300px;
+    object-fit: cover;
+}
+.fm {
+    width: 500px;
+    height: 300px;
+    object-fit: cover;
+}
+.bottom{
+    height: 400px;
+}
+
+.front_burger{
+    height : 400px;
+    background-color: brown;
+    overflow: hidden;
+}
+.front_member{
+    height : 250px;
+    width: 500px;
+    display: inline;
+
+}
+.front_non{
+    height : 250px;
+    width: 500px;
+    display: inline;
+
+}
+.hamburgermain{
+    display: none;
+    background-color: aqua;
+    width: 1000px;
+    height : 500px;
+}
+footer{
+    margin-top: 0px;
+    background-color: rgb(36, 31, 31);
+    width: 1000px;
+    height: 100px;
+    position: fixed;
+    bottom: 0px;
+}
