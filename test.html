@@ -1,0 +1,118 @@
+<html>
+<head>
+<link rel="stylesheet" type="text/css" href="style.css">
+<style>
+input{
+    display: none;
+}
+</style>
+</head>
+<body>
+    <table>
+        <tr>
+            <td>
+                <label>
+                <input type='button' class="imgburger1" name='스태커2와퍼' value="7000">
+                <img src='https://d1cua0vf0mkpiy.cloudfront.net/images/menu/normal/fb0f6dd6-5086-42c4-ab5b-4d368fda3146.png'>
+                <br /><div class='str'><strong>스태커2와퍼</strong></div>
+                </label>
+            </td>
+            <td>
+                <label>
+                    <input type='button' class="imgburger2" name='스태커3와퍼' value="8000">
+                <img src='https://d1cua0vf0mkpiy.cloudfront.net/images/menu/normal/74300c05-9698-4eb1-a6e9-b1f95de5574d.png' >
+                <br /><div class='str'><strong>스태커3와퍼</strong></div>
+            </td>
+                    </label>
+            <td>
+                <label>
+                    <input type='button' class="imgburger3" name='스태커4와퍼' value="9000">
+                <img src='https://d1cua0vf0mkpiy.cloudfront.net/images/menu/normal/9af4ae8d-57fc-4f85-b480-fe0fbf75da2a.png'>
+                <br /><div class='str'><strong>스태커4와퍼</strong></div>
+            </td>
+                </label>
+            <td>
+                <label>
+                    <input type='button' class="imgburger4" name='갈릭불고기와퍼' value="7700">
+                <img src='https://d1cua0vf0mkpiy.cloudfront.net/images/menu/normal/f22cef5d-a695-4d5f-993d-61460a4e5c7d.png'>
+                <br /><div class='str'><strong>갈릭불고기와퍼</strong></div>
+                    </td>         
+                </label>           
+        </tr>
+<div class='result'></div>
+
+
+<script>
+
+let a1 =document.querySelector('.imgburger1')
+let a2 =document.querySelector('.imgburger2')
+let a3 =document.querySelector('.imgburger3')
+let a4 =document.querySelector('.imgburger4')
+let result = document.querySelector('.result')
+let price =0
+let menu=[]
+
+a1.addEventListener('click',function(){
+    
+    price += 7000
+    menu.push(a1.name)
+    console.log(price)
+    console.log(menu)
+    result.innerHTML =`${menu}`
+
+})
+
+a2.addEventListener('click',function(){
+    
+    price += 8000
+
+    console.log(price)
+    console.log(menu)
+
+})
+a3.addEventListener('click',function(){
+    
+    price += 7000
+
+    console.log(price)
+    console.log(menu)
+
+})
+a4.addEventListener('click',function(){
+    
+    price += 7000
+
+    console.log(price)
+    console.log(menu)
+
+})
+/*
+for(let imgburger of as){
+    imgburger.addEventListener('click',function(){
+
+        for(let i=0;i<as.length;i++){
+            if(as[i].checked == true) {
+                prices[i] += parseInt(as[i].value)
+            }
+        }
+
+        console.log(prices)
+        
+        for(let i=0;i<prices.length;i++){
+            price += parseInt(prices[i])
+        }
+        price = parseInt(prices[0]) +parseInt(prices[1])+parseInt(prices[2])+parseInt(prices[3])
+        console.log(price)
+
+    
+    })
+}
+*/
+
+
+</script>
+
+
+</body>
+
+</html>
