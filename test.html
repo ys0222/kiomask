@@ -5,6 +5,13 @@
 input{
     display: none;
 }
+.pm{
+    display :none;
+}
+.plusBtn{
+    font-size: 15px;
+    cursor :pointer;
+}
 </style>
 </head>
 <body>
@@ -26,7 +33,7 @@ input{
                     </label>
             <td>
                 <label>
-                    <input type='button' class="imgburger3" name='스태커4와퍼' value="9000">
+                    <input type='button' class="imgburger3" name='스태커4와퍼 ' value="9000">
                 <img src='https://d1cua0vf0mkpiy.cloudfront.net/images/menu/normal/9af4ae8d-57fc-4f85-b480-fe0fbf75da2a.png'>
                 <br /><div class='str'><strong>스태커4와퍼</strong></div>
             </td>
@@ -39,7 +46,25 @@ input{
                     </td>         
                 </label>           
         </tr>
-<div class='result'></div>
+
+<div class='result1'></div>
+<div class='result2'></div>
+<div class="pm">
+<button class='plusBtn' onclick="plus()"> +</button>
+<button class='minusBtn' onclick="minus()"> -</button>
+</div>
+<script>
+
+function plus(a){
+    price += parseInt(a)
+    alert('as')
+}
+function minus(a){
+    price -= parseInt(a)
+    alert('as')
+}
+
+</script>
 
 
 <script>
@@ -48,17 +73,36 @@ let a1 =document.querySelector('.imgburger1')
 let a2 =document.querySelector('.imgburger2')
 let a3 =document.querySelector('.imgburger3')
 let a4 =document.querySelector('.imgburger4')
-let result = document.querySelector('.result')
+let result1 = document.querySelector('.result1')
+let result2 = document.querySelector('.result2')
+
+
 let price =0
 let menu=[]
+let btn = `<button class='plusBtn' onclick="plus()"> + </button> <button class='minusBtn' onclick="minus()"> -</button>`
+
+
+
+function inner(menu,price){    
+   
+
+    result1.innerHTML= `${menu}`
+
+    result2.innerHTML =`${price}`
+
+}
+
+function push(name1,name2){
+    menu.push(name1,name2)
+}
 
 a1.addEventListener('click',function(){
     
     price += 7000
-    menu.push(a1.name)
-    console.log(price)
-    console.log(menu)
-    result.innerHTML =`${menu}`
+    
+    push(a1.name,btn)
+    
+    inner(menu,price)
 
 })
 
@@ -66,24 +110,24 @@ a2.addEventListener('click',function(){
     
     price += 8000
 
-    console.log(price)
-    console.log(menu)
+    push(a2.name,btn)
+    inner(menu,price)
 
 })
 a3.addEventListener('click',function(){
     
     price += 7000
 
-    console.log(price)
-    console.log(menu)
+    push(a3.name,btn)
+    inner(menu,price)
 
 })
 a4.addEventListener('click',function(){
     
     price += 7000
 
-    console.log(price)
-    console.log(menu)
+    push(a4.name,btn)
+    inner(menu,price)
 
 })
 /*
