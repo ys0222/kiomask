@@ -12,6 +12,21 @@ input{
     font-size: 15px;
     cursor :pointer;
 }
+.result1 {
+    background-color: antiquewhite;
+}
+.result2 {
+    background-color: black;
+    color:white;
+}
+.result3 {
+    background-color: white;
+}
+.result4 {
+    background-color: blue;
+    color:white;
+
+}
 </style>
 </head>
 <body>
@@ -49,16 +64,16 @@ input{
 
 <div class='result1'></div>
 <div class='result2'></div>
+<div class='result3'></div>
+<div class='result4'></div>
+
 <div class="pm">
 <button class='plusBtn' onclick="plus()"> +</button>
 <button class='minusBtn' onclick="minus()"> -</button>
 </div>
 <script>
 
-function plus(a){
-    price += parseInt(a)
-    alert('as')
-}
+
 function minus(a){
     price -= parseInt(a)
     alert('as')
@@ -75,83 +90,102 @@ let a3 =document.querySelector('.imgburger3')
 let a4 =document.querySelector('.imgburger4')
 let result1 = document.querySelector('.result1')
 let result2 = document.querySelector('.result2')
-
+let result3 = document.querySelector('.result3')
+let result4 = document.querySelector('.result4')
 
 let price =0
-let menu=[]
-let btn = `<button class='plusBtn' onclick="plus()"> + </button> <button class='minusBtn' onclick="minus()"> -</button>`
+let count =[0,0,0,0]
+
+let menu=''
+let nums=''
+let prices=''
+let btns=''
+
+let btnList = [``,`<button class='plusBtn' onclick="plus1()"> + </button> <button class='minusBtn' onclick="minus1()"> -</button>`
+,`<button class='plusBtn' onclick="plus2()"> + </button> <button class='minusBtn' onclick="minus1()"> -</button>`
+]
 
 
-
-function inner(menu,price){    
-   
-
-    result1.innerHTML= `${menu}`
-
-    result2.innerHTML =`${price}`
-
+//플러스 버튼에대한 함수
+function plus1(){
+    price1 = 7000
+    price += price1
+    count[1] ++
 }
 
-function push(name1,name2){
-    menu.push(name1,name2)
+//마이너스 버튼에대한 함수
+function minus1(){
+    alert('a')
+}
+
+//innerHTML하는 함수
+function inner(menu,num,price,total){    
+    result1.innerHTML= `${menu}`
+    result2.innerHTML= `${num}`
+    result3.innerHTML= `${price}`
+    result4.innerHTML =`총 결제 금액 : ${total}`
+}
+//plus버튼
+function innerPlus(num,price,total){    
+    result2.innerHTML= `${num}`
+    result3.innerHTML= `${price}`
+    result4.innerHTML =`총 결제 금액 : ${total}`
+}
+//리스트에 저장해주는 함수
+function push(name,num,price,btn){
+    menu += `${name} ${btn}` 
+    nums += `<b>${num}</b> 개`
+    prices +=`${price} 원`
+    btns += `${btn}`
 }
 
 a1.addEventListener('click',function(){
-    
-    price += 7000
-    
-    push(a1.name,btn)
-    
-    inner(menu,price)
+    count[1] ++
+    if (count[1] <= 1){
+        price1 = 7000
+        price += price1
+        push(a1.name,count[1],price1,btnList[1])
+        inner(menu,nums,prices,price)    
+    }
 
 })
 
 a2.addEventListener('click',function(){
-    
-    price += 8000
-
-    push(a2.name,btn)
-    inner(menu,price)
+    count[2] ++
+    if (count[2] < 2){
+        price2 = 8000
+        price += price2
+        push(a2.name,count[2],price2,btnList[2])
+        inner(menu,nums,prices,price)    
+    }
 
 })
 a3.addEventListener('click',function(){
     
-    price += 7000
-
-    push(a3.name,btn)
-    inner(menu,price)
-
+    if (count[3] < 2){
+        price3 = 8000
+        price += price3
+        push(a3.name,count[3],price3,btn)
+        inner(menu,price)    
+    }
+    else {
+    }
+    count[3] ++
 })
 a4.addEventListener('click',function(){
     
-    price += 7000
-
-    push(a4.name,btn)
-    inner(menu,price)
-
+    if (count[4] < 2){
+        price4 = 8000
+        price += price4
+        push(a4.name,count[4],price4,btn)
+        inner(menu,price)    
+    }
+    else {
+    }
+    count[4] ++
 })
-/*
-for(let imgburger of as){
-    imgburger.addEventListener('click',function(){
 
-        for(let i=0;i<as.length;i++){
-            if(as[i].checked == true) {
-                prices[i] += parseInt(as[i].value)
-            }
-        }
 
-        console.log(prices)
-        
-        for(let i=0;i<prices.length;i++){
-            price += parseInt(prices[i])
-        }
-        price = parseInt(prices[0]) +parseInt(prices[1])+parseInt(prices[2])+parseInt(prices[3])
-        console.log(price)
-
-    
-    })
-}
-*/
 
 
 </script>

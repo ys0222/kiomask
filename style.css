@@ -95,15 +95,17 @@ footer{
 footer .foot {
     margin-top: 35.5px;
 }
-footer .foot .cal{
+footer .foot .total{
     color : white;
-    font-size: 22px;
+    font-size: 10px;
     font-weight: bold;
     margin-left: 450px;
+    position: fixed;
+    left :500px;
 }
 footer .foot .menu{
     color : white;
-    font-size: 22px;
+    font-size: 10px;
     font-weight: bold;
 }
 img {
