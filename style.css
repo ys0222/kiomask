@@ -91,6 +91,7 @@ footer{
     height: 100px;
     position: fixed;
     bottom: 0px;
+   color : white;
 }
 footer .foot {
     margin-top: 35.5px;
