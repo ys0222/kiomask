@@ -14,16 +14,67 @@ function plus1(){
     price1 = 7000
     price += price1
     count[1] ++
+    inner(0,price)
 }
-
+function plus2(){
+    price2 = 7000
+    price += price2
+    count[2] ++
+    inner(0,price2)
+}
+function plus3(){
+    price3 = 7000
+    price += price3
+    count[3] ++
+    inner(0,price3)
+}
+function plus4(){
+    price4 = 7000
+    price += price4
+    count[4] ++
+    inner(0,price4)
+}
 //마이너스 버튼에대한 함수
 function minus1(){
-    alert('a')
+    if (count[1] >=2){
+        count[1] --
+        price -= price1
+        inner(0,price)
+    }
+    else {
+        alert('최소 1개 이상 구매하셔야합니다.')
+    }
 }
 
-//plus버튼
-function innerPlus(num,price,total){    
-    result2.innerHTML= `${num}`
-    result3.innerHTML= `${price}`
-    result4.innerHTML =`총 결제 금액 : ${total}`
+function minus2(){
+    if (count[2] >=2){
+        count[2] --
+        price -= price2
+        inner(0,price)
+    }
+    else {
+        alert('최소 1개 이상 구매하셔야합니다.')
+    }
+}
+
+function minus3(){
+    if (count[3] >=2){
+        count[3] --
+        price -= price3
+        inner(0,price)
+    }
+    else {
+        alert('최소 1개 이상 구매하셔야합니다.')
+    }
+}
+
+function minus4(){
+    if (count[4] >=2){
+        count[4] --
+        price -= price4
+        inner(0,price)
+    }
+    else {
+        alert('최소 1개 이상 구매하셔야합니다.')
+    }
 }
