@@ -1,11 +1,3 @@
-let price=0
-let menu=''
-let nums=''
-let prices=''
-let btns=''
-let count =[0,0,0,0,0,0,0,0,0]
-
-
 let menuS= document.querySelector('.menu')
 let numberS = document.querySelector('.numbers')
 let priceS = document.querySelector('.price')
@@ -20,108 +12,87 @@ let imgburger6 = document.querySelector('.imgburger6')
 let imgburger7 = document.querySelector('.imgburger7')
 let imgburger8 = document.querySelector('.imgburger8')
 
-//리스트에 저장해주는 함수
-function push(name,num,price,btn){
-    menu += `${name} ${btn} ` 
-    nums += `<b>${num}</b> 개`
-    prices +=`${price} 원`
-    btns += `${btn}`
-}
+let price=0
+let menu=''
+let nums=''
+let prices=''
+let btns=''
+let count =['',0,0,0,0,0,0,0,0]
+let names=['',imgburger1.name,imgburger2.name,imgburger3.name,imgburger4.name,imgburger5.name,imgburger6.name,imgburger7.name,imgburger8.name]
 
-//innerHTML하는 함수
-function inner(menu,price){    
-    if (menu == 0){
-        total.innerHTML =`총 결제 금액 : ${price}`
-        }
-    else {
-        menuS.innerHTML= `메뉴 : ${menu}`
-        total.innerHTML =`총 결제 금액 : ${price}`
-    }    
+let str='주문 하신 메뉴 : '
+
+
+//innerhtml하는 함수
+function inner(name,count,btnPlus,btnMinus,btnDelete)
+{
+    for(let i=1;i<count.length;i++){
+       if(count[i] >= 1) {
+           str += `${name[i]} ${btnPlus[i]} ${count[i]} 개 ${btnMinus[i]} ${btnDelete[i]}`
+           str +=`\u00A0`
+       }
+    }
+        menuS.innerHTML = `${str}`
+        btnPrice(price)
+
+        str ='주문 하신 메뉴 : '
+}
+function btnPrice(price){
+    total.innerHTML =`결제 하실 금액 : ${price}`
 }
 
 
 imgburger1.addEventListener('click',function(){
+    price1 = parseInt(imgburger1.value)
+    price += price1
     count[1] ++
-    if (count[1] <= 1){
-        price1 = 7000
-        price += price1
-        push(imgburger1.name,count[1],price1,btnList[1])
-        inner(menu,price)    
-    }
-
+    inner(names,count,btnPluses,btnMinuses,btnDeletes)
 })
 
 imgburger2.addEventListener('click',function(){
+    price2 = parseInt(imgburger2.value)
+    price += price2
     count[2] ++
-    if (count[2] <= 1){
-        price2 = 8000
-        price += price2
-        push(imgburger2.name,count[2],price2,btnList[2])
-        inner(menu,price)    
-    }
-
+    inner(names,count,btnPluses,btnMinuses,btnDeletes)
 })
 imgburger3.addEventListener('click',function(){
+    price3 = parseInt(imgburger3.value)
+    price += price3
     count[3] ++
-    if (count[3] <= 1){
-        price3 = 7000
-        price += price3
-        push(imgburger3.name,count[3],price3,btnList[3])
-        inner(menu,price)    
-    }
+    inner(names,count,btnPluses,btnMinuses,btnDeletes)
 })
 imgburger4.addEventListener('click',function(){
-    
+    price4 = parseInt(imgburger4.value)
+    price += price4
     count[4] ++
-    if (count[4] <= 1){
-        price4 = 7000
-        price += price4
-        push(imgburger4.name,count[4],price4,btnList[4])
-        inner(menu,price)    
-    }
+    inner(names,count,btnPluses,btnMinuses,btnDeletes)
 })
 
 imgburger5.addEventListener('click',function(){
-    
+    price5 = parseInt(imgburger5.value)
+    price += price5
     count[5] ++
-    if (count[5] <= 1){
-        price5 = 7000
-        price += price5
-        push(imgburger5.name,count[5],price5,btnList[5])
-        inner(menu,price)    
-    }
+    inner(names,count,btnPluses,btnMinuses,btnDeletes)
 })
 
 imgburger6.addEventListener('click',function(){
-    
+    price6 = parseInt(imgburger6.value)
+    price += price6
     count[6] ++
-    if (count[6] <= 1){
-        price6 = 10800
-        price += price6
-        push(imgburger6.name,count[6],price6,btnList[6])
-        inner(menu,price)    
-    }
+    inner(names,count,btnPluses,btnMinuses,btnDeletes)
 })
 
 imgburger7.addEventListener('click',function(){
-    
+    price7 = parseInt(imgburger7.value)
+    price += price7
     count[7] ++
-    if (count[7] <= 1){
-        price7 = 8800
-        price += price7
-        push(imgburger7.name,count[7],price7,btnList[7])
-        inner(menu,price)    
-    }
+    inner(names,count,btnPluses,btnMinuses,btnDeletes)
 })
 
 imgburger8.addEventListener('click',function(){
-    
+    price8 = parseInt(imgburger8.value)
+    price += price8
     count[8] ++
-    if (count[8] <= 1){
-        price8 = 7000
-        price += price8
-        push(imgburger8.name,count[8],price8,btnList[8])
-        inner(menu,price)    
-    }
+    inner(names,count,btnPluses,btnMinuses,btnDeletes)
 })
 

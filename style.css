@@ -89,26 +89,14 @@ footer{
     background-color: rgb(36, 31, 31);
     width: 1000px;
     height: 100px;
-    position: fixed;
     bottom: 0px;
-   color : white;
-}
-footer .foot {
-    margin-top: 35.5px;
-}
-footer .foot .total{
     color : white;
-    font-size: 10px;
+    font-size: 15px;
     font-weight: bold;
-    margin-left: 450px;
     position: fixed;
-    left :500px;
+    bottom : 0px;
 }
-footer .foot .menu{
-    color : white;
-    font-size: 10px;
-    font-weight: bold;
-}
+
 img {
     width : 240px;
     height: 190px;

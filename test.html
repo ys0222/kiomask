@@ -71,15 +71,7 @@ input{
 <button class='plusBtn' onclick="plus()"> +</button>
 <button class='minusBtn' onclick="minus()"> -</button>
 </div>
-<script>
 
-
-function minus(a){
-    price -= parseInt(a)
-    alert('as')
-}
-
-</script>
 
 
 <script>
@@ -100,43 +92,74 @@ let nums=''
 let prices=''
 let btns=''
 
-let btnList = [``,`<button class='plusBtn' onclick="plus1()"> + </button> <button class='minusBtn' onclick="minus1()"> -</button>`
-,`<button class='plusBtn' onclick="plus2()"> + </button> <button class='minusBtn' onclick="minus2()"> -</button>`
-,`<button class='plusBtn' onclick="plus3()"> + </button> <button class='minusBtn' onclick="minus3()"> -</button>`
-,`<button class='plusBtn' onclick="plus4()"> + </button> <button class='minusBtn' onclick="minus4()"> -</button>`
+let str =''
+
+let names=['',a1.name,a2.name,a3.name,a4.name]
+let btnPluses = [``,`<button class='plusBtn' onclick="plus1()"> + </button> `
+,`<button class='plusBtn' onclick="plus2()"> + </button> `
+,`<button class='plusBtn' onclick="plus3()"> + </button> `
+,`<button class='plusBtn' onclick="plus4()"> + </button> `
 ]
+
+let btnMinuses=[``,`<button class='minusBtn' onclick="minus1()"> -</button>`,
+`<button class='minusBtn' onclick="minus2()"> -</button>`,
+`<button class='minusBtn' onclick="minus3()"> -</button>`,
+`<button class='minusBtn' onclick="minus4()"> -</button>`,
+``
+]
+
+let btnDeletes=[``,`<button class='deleteBtn' onclick="delete1()"> x</button>`,
+`<button class='deleteBtn' onclick="delete2()"> x</button>`,
+`<button class='deleteBtn' onclick="delete3()"> x</button>`,
+`<<button class='deleteBtn' onclick="delete4()"> x</button>`,
+``
+]
+
+function inner(name,count,btnPlus,btnMinus,btnDelete)
+{
+    for(let i=1;i<count.length;i++){
+       if(count[i] >= 1) {
+           str += `${name[i]} ${btnPlus[i]} ${count[i]} ${btnMinus[i]} ${btnDelete[i]}`
+       }
+    }
+        result1.innerHTML = `${str}`
+        btnPrice(price)
+
+        str =''
+}
 
 //플러스 버튼에대한 함수
 function plus1(){
     price1 = 7000
     price += price1
     count[1] ++
-    inner(0,price)
+    inner(names,count,btnPluses,btnMinuses,btnDeletes)
 }
 function plus2(){
     price2 = 7000
     price += price2
     count[2] ++
-    inner(0,price)
+    inner(names,count,btnPluses,btnMinuses,btnDeletes)
 }
 function plus3(){
     price3 = 7000
     price += price3
     count[3] ++
-    inner(0,price)
+    inner(names,count,btnPluses,btnMinuses,btnDeletes)
 }
 function plus4(){
     price4 = 7000
     price += price4
     count[4] ++
-    inner(0,price)
+    inner(names,count,btnPluses,btnMinuses,btnDeletes)
 }
 //마이너스 버튼에대한 함수
 function minus1(){
     if (count[1] >=2){
         count[1] --
         price -= price1
-        inner(0,price)
+        inner(names,count,btnPluses,btnMinuses,btnDeletes)
+
     }
     else {
         alert('최소 1개 이상 구매하셔야합니다.')
@@ -146,7 +169,7 @@ function minus2(){
     if (count[2] >=2){
         count[2] --
         price -= price2
-        inner(0,price)
+        inner(names,count,btnPluses,btnMinuses,btnDeletes)
     }
     else {
         alert('최소 1개 이상 구매하셔야합니다.')
@@ -154,8 +177,8 @@ function minus2(){
 function minus3(){
     if (count[2] >=2){
         count[2] --
-        price -= price1
-        inner(0,price)
+        price -= price3
+        inner(names,count,btnPluses,btnMinuses,btnDeletes)
     }
     else {
         alert('최소 1개 이상 구매하셔야합니다.')
@@ -163,34 +186,32 @@ function minus3(){
 function minus4(){
     if (count[2] >=2){
         count[2] --
-        price -= price1
-        inner(0,price)
+        price -= price4
+        inner(names,count,btnPluses,btnMinuses,btnDeletes)
     }
     else {
         alert('최소 1개 이상 구매하셔야합니다.')
     }}
-//innerHTML하는 함수
-function inner(menu,total){
-    if (menu == 0){
-        result4.innerHTML =`총 결제 금액 : ${total}`
-        }
-    else {
-        result1.innerHTML= `${menu}`
-        result4.innerHTML =`총 결제 금액 : ${total}`
-    }    
-    
+//삭제버튼
+function delete1(){
+    price -= parseInt(price1 * count[1])
+    count[1] = 0
+    inner(names,count,btnPluses,btnMinuses,btnDeletes)
 }
-//plus버튼
-function innerPlus(total){    
-
-    result4.innerHTML =`총 결제 금액 : ${total}`
+function delete2(){
+    price -= parseInt(price2 * count[2])
+    count[2] = 0
+    inner(names,count,btnPluses,btnMinuses,btnDeletes)
 }
-//리스트에 저장해주는 함수
-function push(name,num,price,btn){
-    menu += `${name} ${btn}` 
-    nums += `<b>${num}</b> 개`
-    prices +=`${price} 원`
-    btns += `${btn}`
+function delete3(){
+    price -= parseInt(price3 * count[3])
+    count[3] = 0
+    inner(names,count,btnPluses,btnMinuses,btnDeletes)
+}
+function delete4(){
+    price -= parseInt(price4 * count[4])
+    count[4] = 0
+    inner(names,count,btnPluses,btnMinuses,btnDeletes)
 }
 
 a1.addEventListener('click',function(){
@@ -198,8 +219,7 @@ a1.addEventListener('click',function(){
     if (count[1] <= 1){
         price1 = 7000
         price += price1
-        push(a1.name,count[1],price1,btnList[1])
-        inner(menu,price)    
+        inner(names,count,btnPluses,btnMinuses,btnDeletes)
     }
 
 })
@@ -209,8 +229,8 @@ a2.addEventListener('click',function(){
     if (count[2] < 2){
         price2 = 8000
         price += price2
-        push(a2.name,count[2],price2,btnList[2])
-        inner(menu,price)    
+        inner(names,count,btnPluses,btnMinuses,btnDeletes)
+  
     }
 
 })
@@ -220,8 +240,8 @@ a3.addEventListener('click',function(){
     if (count[3] < 2){
         price3 = 8000
         price += price3
-        push(a3.name,count[3],price3,btnList[3])
-        inner(menu,price)    
+        inner(names,count,btnPluses,btnMinuses,btnDeletes)
+
     }
     else {
     }
@@ -232,8 +252,8 @@ a4.addEventListener('click',function(){
     if (count[4] < 2){
         price4 = 8000
         price += price4
-        push(a4.name,count[4],price4,btnList[4])
-        inner(menu,price)    
+        inner(names,count,btnPluses,btnMinuses,btnDeletes)
+   
     }
     else {
     }
