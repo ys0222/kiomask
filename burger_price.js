@@ -1,26 +1,4 @@
-let menuS= document.querySelector('.menu')
-let numberS = document.querySelector('.numbers')
-let priceS = document.querySelector('.price')
-let total = document.querySelector('.total')
 
-let imgburger1 = document.querySelector('.imgburger1')
-let imgburger2 = document.querySelector('.imgburger2')
-let imgburger3 = document.querySelector('.imgburger3')
-let imgburger4 = document.querySelector('.imgburger4')
-let imgburger5 = document.querySelector('.imgburger5')
-let imgburger6 = document.querySelector('.imgburger6')
-let imgburger7 = document.querySelector('.imgburger7')
-let imgburger8 = document.querySelector('.imgburger8')
-
-let price=0
-let menu=''
-let nums=''
-let prices=''
-let btns=''
-let count =['',0,0,0,0,0,0,0,0]
-let names=['',imgburger1.name,imgburger2.name,imgburger3.name,imgburger4.name,imgburger5.name,imgburger6.name,imgburger7.name,imgburger8.name]
-
-let str='주문 하신 메뉴 : '
 
 
 //innerhtml하는 함수
@@ -96,3 +74,56 @@ imgburger8.addEventListener('click',function(){
     inner(names,count,btnPluses,btnMinuses,btnDeletes)
 })
 
+imgburger9.addEventListener('click',function(){
+    price9 = parseInt(imgburger9.value)
+    price += price9
+    count[9] ++
+    inner(names,count,btnPluses,btnMinuses,btnDeletes)
+})
+
+imgburger10.addEventListener('click',function(){
+    price10 = parseInt(imgburger10.value)
+    price += price10
+    count[10] ++
+    inner(names,count,btnPluses,btnMinuses,btnDeletes)
+})
+imgburger11.addEventListener('click',function(){
+    price11 = parseInt(imgburger11.value)
+    price += price11
+    count[11] ++
+    inner(names,count,btnPluses,btnMinuses,btnDeletes)
+})
+imgburger12.addEventListener('click',function(){
+    price12 = parseInt(imgburger12.value)
+    price += price12
+    count[12] ++
+    inner(names,count,btnPluses,btnMinuses,btnDeletes)
+})
+
+imgburger13.addEventListener('click',function(){
+    price13 = parseInt(imgburger13.value)
+    price += price13
+    count[13] ++
+    inner(names,count,btnPluses,btnMinuses,btnDeletes)
+})
+
+imgburger14.addEventListener('click',function(){
+    price14 = parseInt(imgburger14.value)
+    price += price14
+    count[14] ++
+    inner(names,count,btnPluses,btnMinuses,btnDeletes)
+})
+
+imgburger15.addEventListener('click',function(){
+    price15 = parseInt(imgburger15.value)
+    price += price15
+    count[15] ++
+    inner(names,count,btnPluses,btnMinuses,btnDeletes)
+})
+
+imgburger16.addEventListener('click',function(){
+    price16 = parseInt(imgburger16.value)
+    price += price16
+    count[16] ++
+    inner(names,count,btnPluses,btnMinuses,btnDeletes)
+})

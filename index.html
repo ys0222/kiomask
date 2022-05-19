@@ -9,8 +9,8 @@
 <nav>
 <ul>
     <li class='hamburger'><a>햄버거</a></li>
-    <li class='drink'><a>음료수</a></li>
-    <li class='desert'><a>디저트</a></li>
+    <li class='beverage'><a>음료&디저트</a></li>
+    <li class='side'><a>사이드</a></li>
     <li class='etc'><a>기타메뉴</a></li>
 </ul>
 </nav>
@@ -24,15 +24,19 @@
 
 <footer>
 <div class='foot'>
-<div>
+<div class='memu_div'>
 <span class='menu'>주문 하신 메뉴 : </span>
 </div>
 
-<div>
+<div class='total_div'>
 <span class='total'>결제 하실 금액 : </span>
 </div>
 </div>
 </footer>
+
+<!-- 햄버거 / 음료수 /디저트 /기타메뉴 클릭시 나오는 메뉴 -->
+
+<!-- 햄버거메뉴 -->
 <div class='hamburgermain'>
 <table>
     <tr>
@@ -52,14 +56,14 @@
         </td>
         <td>
             <label>
-            <input class="imgburger3" name='스태커4와퍼' value="7000">
+            <input class="imgburger3" name='스태커4와퍼' value="11400">
             <img src='https://d1cua0vf0mkpiy.cloudfront.net/images/menu/normal/9af4ae8d-57fc-4f85-b480-fe0fbf75da2a.png' >
             <br /><div class='str'><strong>스태커4와퍼</strong></div>
         </label>
         </td>
         <td>
             <label>
-                <input class="imgburger4" name='갈릭불고기와퍼' value="7000">
+                <input class="imgburger4" name='갈릭불고기와퍼' value="6500">
             <img src='https://d1cua0vf0mkpiy.cloudfront.net/images/menu/normal/f22cef5d-a695-4d5f-993d-61460a4e5c7d.png' >
             <br /><div class='str'><strong>갈릭불고기와퍼</strong></div>
             </label>      
@@ -69,7 +73,7 @@
     <tr>
         <td>
             <label>
-                <input class="imgburger5" name='와퍼' value="7000">
+                <input class="imgburger5" name='와퍼' value="5000">
             <img src='https://d1cua0vf0mkpiy.cloudfront.net/images/menu/normal/156321c9-1cfd-430a-934f-3da472e6e56c.png' >
             <br /><div class='str'><strong>와퍼</strong></div>
         </label>
@@ -77,7 +81,7 @@
 
         <td>
             <label>
-            <input class="imgburger6" name='불고기와퍼' value="7000">
+            <input class="imgburger6" name='불고기와퍼' value="5500">
             <img src='https://d1cua0vf0mkpiy.cloudfront.net/images/menu/normal/156321c9-1cfd-430a-934f-3da472e6e56c.png' >
             <br /><div class='str'><strong>불고기와퍼</strong></div>
         </label>
@@ -85,16 +89,81 @@
 
         <td>
             <label>
-            <input class="imgburger7" name='치즈와퍼' value="7000">
+            <input class="imgburger7" name='치즈와퍼' value="6500">
             <img src='https://d1cua0vf0mkpiy.cloudfront.net/images/menu/normal/2171ed74-fcce-4d9d-8177-0540832406a3.png' >
             <br /><div class='str'><strong>치즈와퍼</strong></div>
         </label>
         </td>
         <td>
             <label>
-            <input class="imgburger8" name='베이컨치즈와퍼' value="7000">
+            <input class="imgburger8" name='베이컨치즈와퍼' value="7200">
             <img src='https://d1cua0vf0mkpiy.cloudfront.net/images/menu/normal/6de5495d-fff6-4c3e-a572-5cfc0592aac6.png'>
             <br /><div class='str'><strong>베이컨치즈와퍼</strong></div>
+            </label>
+                </td>                    
+    </tr>
+    <tr>
+        <td>
+            <label>
+            <input class="imgburger9" name='할라피뇨와퍼' value="8500">
+            <img src='https://d1cua0vf0mkpiy.cloudfront.net/images/menu/normal/b4779bb8-68d2-4280-b7bf-e9963103c198.png'>
+            <br /><div class='str'><strong>할라피뇨 와퍼</strong></div>
+            </label>
+                </td>     
+
+        <td>
+            <label>
+            <input class="imgburger10" name='기네스콰트로치즈와퍼' value="9900">
+            <img src='https://d1cua0vf0mkpiy.cloudfront.net/images/menu/normal/b4779bb8-68d2-4280-b7bf-e9963103c198.png'>
+            <br /><div class='str'><strong>기네스콰트로치즈와퍼</strong></div>
+            </label>
+                </td>     
+
+        <td>
+            <label>
+            <input class="imgburger11" name='기네스머쉬룸와퍼' value="8200">
+            <img src='https://d1cua0vf0mkpiy.cloudfront.net/images/menu/normal/cfd18628-2507-460d-badc-728de3dfed3c.png'>
+            <br /><div class='str'><strong>기네스머쉬룸와퍼</strong></div>
+            </label>
+                </td>     
+
+        <td>
+            <label>
+            <input class="imgburger12" name='통새우와퍼' value="8200">
+            <img src='https://d1cua0vf0mkpiy.cloudfront.net/images/menu/normal/cfd18628-2507-460d-badc-728de3dfed3c.png'>
+            <br /><div class='str'><strong>통새우와퍼</strong></div>
+            </label>
+                </td>     
+    </tr>
+    <tr>
+        <td>
+            <label>
+                <input class="imgburger13" name='몬스터X' value="11000">
+            <img src='https://d1cua0vf0mkpiy.cloudfront.net/images/menu/normal/ebe67b71-cb07-48cf-b28f-034b7ef0d15e.png' >
+            <br /><div class='str'><strong>몬스터X</strong></div>
+        </label>
+        </td>
+
+        <td>
+            <label>
+            <input class="imgburger14" name='통새우X' value="9500">
+            <img src='https://d1cua0vf0mkpiy.cloudfront.net/images/menu/normal/9317e87a-d1d1-4533-b32b-a09ae538f14d.png' >
+            <br /><div class='str'><strong>통새우X</strong></div>
+        </label>
+        </td>
+
+        <td>
+            <label>
+            <input class="imgburger15" name='디아블로 얼티밋 도넛킹' value="8700">
+            <img src='https://d1cua0vf0mkpiy.cloudfront.net/images/menu/normal/67f4484e-4116-4ec7-88ea-e8c99a0f8208.png' >
+            <br /><div class='str'><strong>디아블로 얼티밋 도넛킹</strong></div>
+        </label>
+        </td>
+        <td>
+            <label>
+            <input class="imgburger16" name='킹치킨버거' value="5200">
+            <img src='https://d1cua0vf0mkpiy.cloudfront.net/images/menu/normal/1892da6a-d80b-480f-801a-0ee83c8698aa.png'>
+            <br /><div class='str'><strong>킹치킨버거</strong></div>
             </label>
                 </td>                    
     </tr>
@@ -102,11 +171,143 @@
 </div>
 
 
+<!-- 음료&디저트메뉴 -->
+<div class='beveragemain'>
+    <table>
+        <tr>
+            <td>
+                <label>
+                <input class="drink1" name='아메리카노' value="2000">
+                <img src='https://d1cua0vf0mkpiy.cloudfront.net/images/menu/normal/73e396dc-3d69-4868-a76b-ca937a0640fd.png'>
+                <br /><div class='str'><strong>아메리카노</strong></div>
+                </label>
+            </td>
+            <td>
+                <label>
+                <input class="drink2" name='핫초코' value="2000">
+                <img src='https://d1cua0vf0mkpiy.cloudfront.net/images/menu/normal/8fb2f382-178d-41b7-9dd6-7dd616f3d56e.png'>
+                <br /><div class='str'><strong>핫초코</strong></div>
+            </label>
+            </td>
+            <td>
+                <label>
+                <input class="drink3" name='선데' value="1400">
+                <img src='https://d1cua0vf0mkpiy.cloudfront.net/images/menu/normal/953377b0-f20f-4e06-b553-ad4745a7042a.png' >
+                <br /><div class='str'><strong>선데</strong></div>
+            </label>
+            </td>
+            <td>
+                <label>
+                    <input class="drink4" name='컵 아이스크림' value="700">
+                <img src='https://d1cua0vf0mkpiy.cloudfront.net/images/menu/normal/fed2d8e8-611d-4080-b11c-3878863f5a5f.png' >
+                <br /><div class='str'><strong>컵 아이스크림</strong></div>
+                </label>      
+            </td>   
+               
+        </tr>
+        <tr>
+            <td>
+                <label>
+                    <input class="drink5" name='코카콜라' value="1500">
+                <img src='https://d1cua0vf0mkpiy.cloudfront.net/images/menu/normal/599bb011-1246-4a96-9cbc-b7e973d352e0.png' >
+                <br /><div class='str'><strong>코카콜라</strong></div>
+            </label>
+            </td>
+    
+            <td>
+                <label>
+                <input class='drink6'' name='스프라이트' value="1500">
+                <img src='https://d1cua0vf0mkpiy.cloudfront.net/images/menu/normal/f314c283-870f-46b9-94f2-c1bbaa9a683e.png' >
+                <br /><div class='str'><strong>스프라이트</strong></div>
+            </label>
+            </td>                 
+        </tr>
+    </table>
+</div>
+
+
+<!-- 사이드메뉴 -->
+
+<div class='sidemain'>
+    <table>
+        <tr>
+            <td>
+                <label>
+                <input class="side1" name='프렌치프라이' value="1700">
+                <img src='https://d1cua0vf0mkpiy.cloudfront.net/images/menu/normal/4b6f3bf0-ab25-44a3-b811-0e9d415ce0ab.png'>
+                <br /><div class='str'><strong>프렌치프라이</strong></div>
+                </label>
+            </td>
+            <td>
+                <label>
+                <input class="side2" name='치즈프라이' value="2200">
+                <img src='https://d1cua0vf0mkpiy.cloudfront.net/images/menu/normal/d89aa292-5cbc-4812-a919-84c8964792e1.png'>
+                <br /><div class='str'><strong>치즈프라이</strong></div>
+            </label>
+            </td>
+            <td>
+                <label>
+                <input class="side3" name='콘샐러드' value="900">
+                <img src='https://d1cua0vf0mkpiy.cloudfront.net/images/menu/normal/7023d976-366b-486c-b0cd-f9144c13e4fc.png' >
+                <br /><div class='str'><strong>콘샐러드</strong></div>
+            </label>
+            </td>
+            <td>
+                <label>
+                    <input class="side4" name='바삭킹8조각 + 소스' value="3000">
+                <img src='https://d1cua0vf0mkpiy.cloudfront.net/images/menu/normal/25ab85fd-91a2-4003-8798-145e04db72e9.png' >
+                <br /><div class='str'><strong>바삭킹8조각 + 소스</strong></div>
+                </label>      
+            </td>   
+               
+        </tr>
+        <tr>
+            <td>
+                <label>
+                    <input class="side5" name='치킨 도넛 1조각' value="700">
+                <img src='https://d1cua0vf0mkpiy.cloudfront.net/images/menu/normal/3c643a05-caa7-430d-9447-da6089e4428c.png' >
+                <br /><div class='str'><strong>치킨 도넛 1조각</strong></div>
+            </label>
+            </td>
+    
+            <td>
+                <label>
+                <input class='side6'' name='어니언링' value="1900">
+                <img src='https://d1cua0vf0mkpiy.cloudfront.net/images/menu/normal/a256f028-4db5-42c5-8472-3376f82efbda.png' >
+                <br /><div class='str'><strong>어니언링</strong></div>
+            </label>
+            </td>                 
+        </tr>
+    </table>
+</div>
+
+<!-- 기타메뉴 -->
+
+<div class='etcmain'>
+    <table>
+        <tr>
+            <td>
+                <label>
+                <input class="etc1" name='독퍼' value="3200">
+                <img src='https://d1cua0vf0mkpiy.cloudfront.net/images/menu/normal/03dd2544-84ed-44e9-82d5-6db051a457c2.png'>
+                <br /><div class='str'><strong>독퍼</strong></div>
+                </label>
+            </td>
+        </tr>
+    </table>
+</div>
+
 </div>
 <script src='main.js'>
 </script>
 
-<script src='price.js'>
+<script src='burger_price.js'>
+
+</script>
+<script src='drink_price.js'>
+
+</script>
+<script src='sideetc_price.js'>
 
 </script>
 <script src='btns.js'>

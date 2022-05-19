@@ -10,7 +10,6 @@ nav{
     border-top-right-radius: 20px;
     cursor: pointer;
     position: fixed;
-    top:10px;
     height: 50px;
     width: 1000px;
 }
@@ -80,9 +79,31 @@ display: inline-block;
 .hamburgermain{
     display: none;
     width: 1000px;
-    height : 2000px;
+    height : 1000px;
     padding-top: 50px;
-    overflow-y: hidden;
+    overflow: hidden;
+}
+
+.beveragemain{
+    display: none;
+    width: 1000px;
+    height : 700px;
+    padding-top: 50px;
+    overflow: hidden;
+}
+.sidemain{
+    display: none;
+    width: 1000px;
+    height : 700px;
+    padding-top: 50px;
+    overflow: hidden;
+}
+.etcmain{
+    display: none;
+    width: 1000px;
+    height : 700px;
+    padding-top: 50px;
+    overflow: hidden;
 }
 footer{
     margin-top: 0px;
@@ -95,8 +116,25 @@ footer{
     font-weight: bold;
     position: fixed;
     bottom : 0px;
+    display: block;
+
 }
 
+.menu_div{
+    width : 600px;
+    height: 100%;
+    background-color: rgb(50, 64, 77);
+    display: inline-block;
+
+
+}
+.total_div{
+    width : 400px;
+    height: 100%;
+
+    display: inline-block;
+    
+}
 img {
     width : 240px;
     height: 190px;
@@ -106,7 +144,7 @@ img {
 strong{
     font-weight: 1000;
     font-family: 휴먼엑스포;
-    font-size: 30px;
+    font-size: 20px;
 }
 .str{
     text-align: center;
