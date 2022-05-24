@@ -16,7 +16,7 @@ function inner(name,count,btnPlus,btnMinus,btnDelete)
         str ='주문 하신 메뉴 : '
 }
 function btnPrice(price){
-    total.innerHTML =`결제 하실 금액 : ${price}`
+    total.innerHTML =`결제 하실 금액 : ${price} ${payBtn[0]}`
 }
 
 
