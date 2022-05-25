@@ -94,4 +94,9 @@ let names=['',imgburger1.name,imgburger2.name,imgburger3.name,imgburger4.name,im
 drink1.name,drink2.name,drink3.name,drink4.name,drink5.name,drink6.name
 ,side1.name,side2.name,side3.name,side4.name,side5.name,side6.name,etc1.name]
 
+let values=['',imgburger1.value,imgburger2.value,imgburger3.value,imgburger4.value,imgburger5.value,imgburger6.value,imgburger7.value,imgburger8.value
+,imgburger9.value,imgburger10.value,imgburger11.value,imgburger12.value,imgburger13.value,imgburger14.value,imgburger15.value,imgburger16.value,
+drink1.value,drink2.value,drink3.value,drink4.value,drink5.value,drink6.value
+,side1.value,side2.value,side3.value,side4.value,side5.value,side6.value,etc1.value]
+
 let str='주문 하신 메뉴 : '

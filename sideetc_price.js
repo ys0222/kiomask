@@ -5,18 +5,25 @@ side1.addEventListener('click',function(){
     price += price23
     count[23] ++
     inner(names,count,btnPluses,btnMinuses,btnDeletes)
+    innerPay(names,count,values)
+
+
 })
 side2.addEventListener('click',function(){
     price24 = parseInt(side3.value)
     price += price24
     count[24] ++
     inner(names,count,btnPluses,btnMinuses,btnDeletes)
+    innerPay(names,count,values)
+
 })
 side3.addEventListener('click',function(){
     price25 = parseInt(side4.value)
     price += price25
     count[25] ++
     inner(names,count,btnPluses,btnMinuses,btnDeletes)
+    innerPay(names,count,values)
+
 })
 
 side4.addEventListener('click',function(){
@@ -24,6 +31,8 @@ side4.addEventListener('click',function(){
     price += price26
     count[26] ++
     inner(names,count,btnPluses,btnMinuses,btnDeletes)
+    innerPay(names,count,values)
+
 })
 
 side5.addEventListener('click',function(){
@@ -31,16 +40,22 @@ side5.addEventListener('click',function(){
     price += price27
     count[27] ++
     inner(names,count,btnPluses,btnMinuses,btnDeletes)
+    innerPay(names,count,values)
+
 })
 side6.addEventListener('click',function(){
     price28 = parseInt(side6.value)
     price += price28
     count[28] ++
     inner(names,count,btnPluses,btnMinuses,btnDeletes)
+    innerPay(names,count,values)
+
 })
 etc1.addEventListener('click',function(){
     price29 = parseInt(etc1.value)
     price += price29
     count[29] ++
     inner(names,count,btnPluses,btnMinuses,btnDeletes)
+    innerPay(names,count,values)
+
 })
